@@ -1,6 +1,7 @@
 def rabin_karp(s, sub):
     N = 0
     K = 0
+
     h_sub = sum(ord(c) for c in sub)
     h = sum(ord(c) for c in s[:len(sub)])
     for pos in range(0,  len(O)- len(sub)  ):
@@ -16,11 +17,12 @@ def rabin_karp(s, sub):
          
             K += 1 
         if flag:
-    
-            print('Нашлось совпадение с этого номера =%d'%(pos+1))
-    print('Потребовалось N=%d проверок'%(N))
-    print('Всего сопадений: =%d' %(K/len(t)))
-
+            for i in range(pos+1, pos+1+len(t)):
+               print(i, end=" " )
+            print ()
+        
+            
+         
 
 
 s = 'ABCDABCDABCDAA' #Сама строка, в которой ищем подсктроку.
