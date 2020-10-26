@@ -4,8 +4,8 @@ def rabin_karp(s, sub):
     result = []
     # Выше не трогать. Менять отсюда
 
-    s = 'abababab'
-    s = s + ' '
+    s = 'abababab '
+   
     t = 'bab'
     N = 0
     o = ''
