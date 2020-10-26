@@ -1,7 +1,8 @@
 def rabin_karp(s, sub):
     N = 0
     K = 0
-
+    T = ' '
+    
     h_sub = sum(ord(c) for c in sub)
     h = sum(ord(c) for c in s[:len(sub)])
     for pos in range(0,  len(O)- len(sub)  ):
@@ -17,15 +18,16 @@ def rabin_karp(s, sub):
          
             K += 1 
         if flag:
-            for i in range(pos+1, pos+1+len(t)):
-               print(i, end=" " )
-            print ()
-        
             
-         
+            T = T  + ', ' + str(pos)
+            T = T[1:]
+   
+            
 
 
-s = 'ABCDABCDABCDAA' #Сама строка, в которой ищем подсктроку.
-t = 'ABCD' #Подстрока, которую ищем в строке
+s = 'abababab' #Сама строка, в которой ищем подсктроку.
+t = 'bab' #Подстрока, которую ищем в строке
 O = s + '+' #Когда была длина s, то когда у подстроки не было справо других елементо, ее не считывало
 rabin_karp(s, t)
+
+
