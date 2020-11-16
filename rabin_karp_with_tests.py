@@ -4,9 +4,9 @@ def rabin_karp(s, sub):
     result = []
     # Выше не трогать. Менять отсюда
 
-    s = 'abababab '
+    s = 'axaxaxax '
    
-    t = 'bab'
+    t = 'xax'
     N = 0
     o = ''
     h_sub = sum(ord(c) for c in sub)
@@ -33,8 +33,8 @@ def rabin_karp(s, sub):
 
 class RabinKarpTest(unittest.TestCase):
     def setUp(self):
-        self.text = 'abababab'
-        self.pattern = 'bab'
+        self.text = 'axaxaxax'
+        self.pattern = 'xax'
 
     def test_type(self):
         self.assertIsInstance(rabin_karp(self.text, "x"), list, msg="Функция должна возвращать список")
