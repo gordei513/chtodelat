@@ -42,15 +42,12 @@ class Rocket(Body):
             self.power_mass -= self.gazv
 
 
-np.sin
-
 G = Body(3, 0.5, 15, 16)
 b = Body(0, 0.5, 15, 16)
 r = Rocket(0, 0)
-
 bodies = [b, r, G]
 
-for t in np.r_[0:4:MODEL_DT]: # для всех временных отрезков
+for t in np.r_[0:5:MODEL_DT]: # для всех временных отрезков
     for b in bodies: # для всех тел
         b.advance() # выполним шаг
 
