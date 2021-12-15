@@ -13,3 +13,6 @@ def prosto(k):
         return(1)
 prosto(k)
 print(prosto(k))
+print(prosto(17))
+print(prosto(25))
+print(prosto(7))
