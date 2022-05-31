@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сложение</title>
+</head>
+<body>
+<h2>Cложение</h2>
+<form method="post" action="/add_message">
+    <input type="message" name="text">
+    <input type="message" name="tag">
+    <button type="submit">выполнить</button>
+</form>
+
+<h4>Cписок операций</h4>
+{% for message in messages %}
+<div>{{ message.text }}&nbsp; + {{ message.tag }}&nbsp;= {{ message.tara}}</div>
+{% endfor %}
+<a href="{{ url_for('main2') }}">Умножение</a>
+</body>
+</html>
