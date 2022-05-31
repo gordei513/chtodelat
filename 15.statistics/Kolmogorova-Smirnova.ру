@@ -1,0 +1,8 @@
+import pandas
+from scipy import stats
+
+
+df1 = pandas.read_csv('dlina.csv')
+d1 = pandas.DataFrame(data=dict(df1=df1['dlina']))
+
+print(stats.kstest(d1, 'norm', (d1.mean(), d1.std()), N=5000))
