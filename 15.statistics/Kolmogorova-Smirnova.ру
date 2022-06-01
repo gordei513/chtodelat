@@ -7,7 +7,6 @@ df1['dlina'].plot(kind='bar')
 df12 = pandas.DataFrame(data={'df1': df1['dlina']})
 
 d1 = df12['df1']
-print(d1)
 print(d1.mean())
 print(d1.std())
 print(stats.kstest(d1, 'norm', (d1.mean(), d1.std()), N=5000))
