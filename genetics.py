@@ -53,5 +53,3 @@ ga_instance.save(filename=filename)
 # Loading the saved GA instance.
 loaded_ga_instance = pygad.load(filename=filename)
 loaded_ga_instance.plot_fitness();
-
-print(scipy.stats.kstest(solution, 'norm', (solution.mean(), solution.std()), N=5000))
